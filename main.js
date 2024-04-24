@@ -41,7 +41,7 @@ scene.add(camera)
 //add a stage
 const stageGeo = new THREE.CylinderGeometry(5,5,0.2,64,64, false)
 const stageMat = new THREE.MeshStandardMaterial({
-  roughness: 1/100
+  roughness: 0,
 })
 
 const textureLoader = new THREE.TextureLoader()
@@ -64,7 +64,7 @@ const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
 controls.enablePan = false
 controls.maxPolarAngle = Math.PI / 2.01
-controls.autoRotate = true
+// controls.autoRotate = true
 
 const grid = new THREE.GridHelper(30, 30)
 // scene.add(grid)
